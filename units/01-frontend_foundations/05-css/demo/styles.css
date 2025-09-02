@@ -1,0 +1,41 @@
+/* 
+if you uncomment this, and you move the link tags in the index.html file, you'll see the color
+of the h1 change. */
+
+/* h1 {
+  color: green !important;
+}
+
+h1 {
+  color: red;
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.big-text {
+  font-size: 70px;
+  color: black;
+}
+
+.content-container {
+  border: 5px solid green;
+  border-left: 10px solid green;
+  border-right: 10px solid green;
+  /* padding: 40px; this style sets 40px on ALL sides*/
+  /* padding: 20px 40px; this style sets the top and bottom margin to 20px, and the left and right to 40px*/
+  padding: 10px 20px 30px 40px; /* this style sets top-10px right-20px bottom-30px left-40px - think CLOCKWISE FROM TOP*/
+
+  margin-bottom: 10px;
+}
+
+.marketing-text {
+  color: orange !important;
+  font-size: 30px;
+}
+
+#special {
+  color: red;
+}
