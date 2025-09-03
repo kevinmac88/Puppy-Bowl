@@ -1,0 +1,42 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  color: red;
+}
+
+.absolute-size,
+.relative-size {
+  /* height: 100px; */
+  min-height: 100px; /* if no content, this ensures the div is at least 100px high, but it can grow vertically with content*/
+  margin-bottom: 20px;
+  background-color: green;
+  color: white;
+  font-size: 30px;
+}
+
+.absolute-size {
+  width: 1000px;
+  padding: 1.5em;
+}
+
+.relative-size {
+  width: 60%;
+  padding: 1.5rem;
+}
+
+.absolute-child,
+.relative-child {
+  min-height: 50px;
+  background-color: red;
+}
+
+.absolute-child {
+  width: 400px;
+}
+
+.relative-child {
+  width: 50%;
+}

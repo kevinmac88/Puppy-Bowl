@@ -1,0 +1,88 @@
+/* === Some styles to start you off! ===*/
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  /*
+    The url is a relative path to the image file
+    from the **HTML** file, not the CSS file!
+  */
+  background-image: url("images/stars.jpg");
+  color: white;
+
+  box-sizing: border-box;
+  margin: 0;
+  padding: 1rem;
+}
+
+header,
+footer {
+  background: black;
+}
+
+header a {
+  color: white;
+}
+
+nav {
+  display: flex;
+  gap: 1ch;
+  justify-content: space-between;
+  align-items: center;
+  /* flex-direction: column-reverse; */
+  border: 5px solid green;
+  height: 2rem;
+}
+
+nav a {
+  border: 1px solid white;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid white;
+  font-size: 10rem;
+  flex-grow: 1;
+}
+
+footer {
+  padding: 0.5rem;
+  text-align: center;
+}
+
+/* === Write your styles below. === */
+
+#earth {
+  flex-grow: 1;
+}
+
+#mars {
+  flex-grow: 1;
+}
+
+#jupiter {
+  flex-grow: 2;
+}
+
+#saturn {
+  flex-grow: 3;
+}
+
+.outer {
+  border: 1px solid yellow;
+  flex-grow: 2;
+}
+
+.inner {
+  border: 1px solid red;
+  flex-grow: 1;
+}
+
+.planets {
+  display: flex;
+}
