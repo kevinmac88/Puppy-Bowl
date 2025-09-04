@@ -1,0 +1,20 @@
+body {
+  background-color: bisque;
+}
+
+/* Media query at-rule */
+@media (width > 500px) {
+  body {
+    background-color: aquamarine;
+  }
+  h1 {
+    font-style: italic;
+  }
+}
+
+/* @media (width >= 700px) */
+@media (min-width: 700px) {
+  body {
+    background-color: blueviolet;
+  }
+}
