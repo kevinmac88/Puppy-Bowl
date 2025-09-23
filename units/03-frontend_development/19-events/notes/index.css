@@ -1,0 +1,16 @@
+.sentence {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1ch;
+}
+
+.word {
+  border: 1px solid black;
+  border-radius: 0.25rem;
+  padding: 1ch;
+}
+
+.word:hover {
+  border-color: red;
+  cursor: pointer;
+}
