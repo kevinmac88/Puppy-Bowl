@@ -1,0 +1,39 @@
+div {
+  width: 85%;
+  padding: 50px;
+  margin: 0 auto;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.grandparent {
+  background-color: yellow;
+}
+
+.parent,
+.child {
+  color: white;
+}
+
+.parent {
+  background-color: green;
+}
+
+.child {
+  background-color: purple;
+}
+
+.todos {
+  border: 3px solid red;
+}
+
+.todo {
+  width: 300px;
+  border: 1px solid black;
+  margin: 0 auto;
+  font-size: 30px;
+}
+
+.completed {
+  text-decoration: line-through;
+}
