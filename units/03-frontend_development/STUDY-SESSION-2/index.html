@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>HR App</title>
+  </head>
+  <body>
+    <h1>HR App</h1>
+    <table id="employee-table">
+      <thead>
+        <tr class="header-row-first">
+          <th colspan="3">Current Employees</th>
+        </tr>
+        <tr class="header-row-second">
+          <th>Name</th>
+          <th>Position</th>
+          <th>Salary</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Our rows will be dynamically injected by JS here-->
+      </tbody>
+    </table>
+    <h2>Add an Employee Here</h2>
+
+    <form id="add-employee">
+      <label>
+        Name:
+        <input type="text" name="name" />
+      </label>
+      <label>
+        Position:
+        <input type="text" name="position" />
+      </label>
+      <label>
+        Salary:
+        <input type="text" name="salary" />
+      </label>
+      <input type="submit" value="Add Employee" />
+      <p id="error-msg" class="hidden">All inputs are required!</p>
+      <p id="success-msg" class="hidden">Employee successfully added!</p>
+    </form>
+    <script src="./script.js"></script>
+  </body>
+</html>

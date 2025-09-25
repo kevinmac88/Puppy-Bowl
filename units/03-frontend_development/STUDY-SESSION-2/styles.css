@@ -1,0 +1,30 @@
+h2 {
+  text-align: center;
+}
+
+#employee-table {
+  table-layout: fixed;
+  width: 60%;
+  margin: 0 auto;
+  border: 1px solid black;
+}
+
+#employee-table tbody td {
+  text-align: center;
+}
+
+#error-msg {
+  color: red;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#success-msg {
+  color: green;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.hidden {
+  display: none;
+}
