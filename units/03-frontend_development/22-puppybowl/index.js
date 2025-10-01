@@ -52,15 +52,20 @@ async function addPlayer(player) {
 //delete the player w/ given ID via API
 async function removePlayer(id) {
   try {
-    const res = await fetch(`${API}/${id}`, {
-      method: "DELETE",
-    });
+    const res = await fetch(`${API}/${id}`, { method: "DELETE" });
+    if (!res.ok) throw new Error(`Delete failed: ${res.status}`);
+
+    // this one clears the details pain if you just deleted the current one selected
+    if (selectedPlayer?.id === id) {
+      selectedPlayer = undefined;
+    }
+    //note to self: ? is the optional chaining operator. basically stops the program from crashing if selectedplayer is undefined by letting it just do nothing.
+
+    await getPlayers(); // updates `players` and calls render()
   } catch (err) {
     console.error(err);
   }
-  render();
 }
-
 // components
 
 //player name that shows details when clicked
@@ -99,9 +104,11 @@ function PlayerDetails() {
 <figure>
   <img alt="${selectedPlayer.name}" src="${selectedPlayer.imageUrl}" />
   </figure>
-  <p>${selectedPlayer.description}</p>
+  <p><span class="key"> Name: </span>${selectedPlayer.name} </p>
+   <p> <span class="key">Breed:</span> ${selectedPlayer.breed} </p>
+    <p> <span class="key">Team:</span> ${selectedPlayer.team} </p>
+     <p> <span class="key">Status:</span> ${selectedPlayer.name}</p>
   <button>Remove Player</button>`;
-
   const $button = $player.querySelector("button");
   $button.addEventListener("click", function () {
     removePlayer(selectedPlayer.id);
@@ -125,6 +132,13 @@ function NewPlayerForm() {
     Profile Pic
     <input name="imageUrl"  />
     </label>
+    <label>
+      Status
+      <select name="status">
+        <option value="bench" selected>Bench</option>
+        <option value="field">Field</option>
+      </select>
+    </label>
     <button>Invite Player</button>`;
 
   $form.addEventListener("submit", function (e) {
@@ -134,7 +148,7 @@ function NewPlayerForm() {
       name: data.get("name"),
       breed: data.get("breed"),
       imageUrl: data.get("imageUrl"),
-      status: "bench",
+      status: data.get("status"),
     });
   });
   return $form;

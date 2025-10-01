@@ -66,3 +66,8 @@ form {
 label {
   display: grid;
 }
+
+.player .key {
+  font-weight: 700;
+  margin-right: 0.25rem;
+}
